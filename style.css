@@ -129,8 +129,8 @@ select, button {
                     );
     background-color: black;
     position: relative;
-    right: 3em;
-    bottom: 15px;
+    right: 25px;
+    bottom: 3em;
     transform: rotate(230deg);
 }
 
