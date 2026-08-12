@@ -113,7 +113,7 @@ select, button {
     border-width: 1px;
     border-radius: 17%;
     position: relative;
-    bottom: 4em;
+    bottom: 6em;
     right: 40px;
 }
 
@@ -129,7 +129,7 @@ select, button {
                     );
     background-color: black;
     position: relative;
-    right: 25px;
+    right: 3em;
     bottom: 15px;
     transform: rotate(230deg);
 }
