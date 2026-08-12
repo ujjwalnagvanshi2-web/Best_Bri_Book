@@ -1,12 +1,12 @@
 // Variable to store
 
 // for 1
-//const back1 = document.getElementById("back_1");
-//const forward1 = document.getElementById("forward_1");
+const back1 = document.getElementById("back_1");
+const forward1 = document.getElementById("forward_1");
 
 // for 2
-//const back2 = document.getElementById("back_2");
-//const forward2 = document.getElementById("forward_2");
+const back2 = document.getElementById("back_2");
+const forward2 = document.getElementById("forward_2");
 
 
 // for display a
