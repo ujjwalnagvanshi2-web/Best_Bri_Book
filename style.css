@@ -1,10 +1,21 @@
 /* Bri Book CSS */
 
+* {
+    box-sizing: border-box;
+}
+
 /* Decoration for elements */
 
 body {
     margin: 0;
     background-color: rgba(201, 247, 255, 0.781);
+    overflow-x: hidden;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
 }
 
 h1 {
@@ -18,10 +29,12 @@ h1 {
 img {
     height: 100%;
     width: 100%;
+    display: block;
+    max-width: 100%;
 }
 
 section {
-    margin-top: 7em;
+    margin-top: clamp(3rem, 7vw, 7rem);
 }
 
 label {
@@ -473,8 +486,45 @@ select, button {
 
 /*Media query for responsive design*/
 
+@media screen and (max-width: 900px) {
+    main {
+        padding: 0 12px;
+    }
+
+    section > div:first-of-type {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        height: auto !important;
+    }
+
+    #paragraph {
+        right: 0;
+        bottom: 0;
+    }
+
+    .about-book {
+        width: 96%;
+    }
+
+    .book-name {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .book-img {
+        width: 35%;
+    }
+
+    label {
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+}
+
 @media screen and (max-width: 768px) {
-    
     #Top-heading {
         height: auto !important;
         padding: 10px 0 !important;
@@ -496,7 +546,6 @@ select, button {
         flex-direction: column !important;
     }
 
-    /* 3. Biography Area Reset */
     #image {
         display: block;
         margin: 0 auto 15px auto !important;
@@ -506,13 +555,13 @@ select, button {
     }
 
     #help {
-        display: none !important; 
+        display: none !important;
     }
 
     #paragraph {
         position: relative !important;
-        inset: 0 !important; 
-        width: 85% !important;
+        inset: 0 !important;
+        width: min(85vw, 420px) !important;
         margin: 0 auto !important;
         height: auto !important;
         padding: 15px;
@@ -527,43 +576,45 @@ select, button {
         height: auto !important;
     }
 
-    /* 4. Book Layout & Scroll Bar */
     .about-book {
         flex-direction: column !important;
         height: auto !important;
         padding: 15px 5px !important;
         align-items: center;
     }
-    
+
     .book-name {
-        height: 200px !important;  
-        overflow-y: scroll !important; 
-        -webkit-overflow-scrolling: touch; 
+        height: 200px !important;
+        width: 92% !important;
+        overflow-y: scroll !important;
+        -webkit-overflow-scrolling: touch;
     }
 
     .back, .forward {
         position: static !important;
         display: inline-flex !important;
         margin: 5px !important;
-        order: 1; 
+        order: 1;
     }
 
     .book-img {
         width: 100% !important;
-        order: 3; 
+        order: 3;
         display: flex;
         flex-direction: column;
         align-items: center;
+        min-width: 0;
     }
 
     nav {
-        order: 10; 
+        order: 10;
         width: 100%;
     }
 
     #setting {
+        width: 100% !important;
         height: auto !important;
-        padding: 15px 0 !important;
+        padding: 15px 10px !important;
         display: flex !important;
         flex-direction: column;
         align-items: center;
@@ -573,5 +624,36 @@ select, button {
         margin: 0 0 10px 0 !important;
         text-align: center;
         width: 90%;
+    }
+
+    select {
+        width: min(90vw, 320px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    main {
+        padding: 0 10px;
+    }
+
+    .about-book {
+        border-radius: 30px;
+        padding: 12px 8px;
+    }
+
+    .book-name {
+        width: 100% !important;
+        border-radius: 30px;
+    }
+
+    .photo {
+        width: 100%;
+        max-width: 210px;
+    }
+
+    .button {
+        width: 100%;
+        max-width: 220px;
+        white-space: normal;
     }
 }
